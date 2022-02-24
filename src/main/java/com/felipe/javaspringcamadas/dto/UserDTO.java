@@ -1,0 +1,39 @@
+package com.felipe.javaspringcamadas.dto;
+
+import com.felipe.javaspringcamadas.entities.User;
+
+public class UserDTO {
+    
+    private Long id;
+    private String name;
+    
+    public UserDTO() {
+        
+    }
+
+    public UserDTO(Long id, String name) {
+        this.id = id;
+        this.name = name;
+    }
+    
+    public UserDTO(User user) {
+        id = user.getId();
+        name = user.getName();
+    }
+
+    public Long getId() {
+        return this.id;
+    }
+    
+    public void setId(Long id) {
+        this.id = id;
+    }
+    
+    public String getName() {
+        return this.name;
+    }
+    
+    public void setName(String name) {
+        this.name = name;
+    }
+}
